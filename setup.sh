@@ -196,7 +196,7 @@ echo -e "\e[33m━━━━━━━━━━━━━━━━━━━━━�
 sleep 0.5
 clear
 wget -O ins-xray.sh https://raw.githubusercontent.com/arismaramar/supreme/aio/xray/ins-xray.sh && chmod +x ins-xray.sh && ./ins-xray.sh
-wwget -O  insshws.sh https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
+wget -O  insshws.sh https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/insshws.sh && chmod +x insshws.sh && ./insshws.sh
 clear
 cat> /root/.profile << END
 # ~/.profile: executed by Bourne-compatible login shells.
