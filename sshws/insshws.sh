@@ -4,19 +4,22 @@
 cd
 
 #Install Script Websocket-SSH Python
-wget -O /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-dropbear
-wget -O /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-stunnel
+wget -O ws-dropbear /usr/local/bin/ws-dropbear https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-dropbear
+wget -O ws-stunnel /usr/local/bin/ws-stunnel https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-stunnel
 
 #izin permision
 chmod +x /usr/local/bin/ws-dropbear
 chmod +x /usr/local/bin/ws-stunnel
 
 #System Dropbear Websocket-SSH Python
-wget -O /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
+wget -O ws-dropbear.service /etc/systemd/system/ws-dropbear.service https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-dropbear.service && chmod +x /etc/systemd/system/ws-dropbear.service
 
 #System SSL/TLS Websocket-SSH Python
-wget -O /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
+wget -O ws-stunnel.service /etc/systemd/system/ws-stunnel.service https://raw.githubusercontent.com/arismaramar/supreme/aio/sshws/ws-stunnel.service && chmod +x /etc/systemd/system/ws-stunnel.service
 
+#izin permision
+chmod +x /usr/local/bin/ws-dropbear.service
+chmod +x /usr/local/bin/ws-stunnel.service
 
 #restart service
 systemctl daemon-reload
