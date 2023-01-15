@@ -52,6 +52,11 @@ touch /var/log/xray/error2.log
 # / / Ambil Xray Core Version Terbaru
 bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version 1.6.1
 
+# Installation Xray Core
+# $latest_version
+xraycore_link="https://github.com/XTLS/Xray-core/releases/download/v1.6.0/xray-linux-64.zip"
+bash -c "$(curl -L https://github.com/XTLS/Xray-install/raw/main/install-release.sh)" @ install -u www-data --version $latest_version
+
 ## crt xray
 systemctl stop nginx
 mkdir /root/.acme.sh
